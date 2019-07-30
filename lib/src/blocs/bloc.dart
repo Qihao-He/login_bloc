@@ -16,6 +16,10 @@ class Bloc extends Object with Validators{
   Function(String) get changeEmail => _emailController.sink.add;
   Function(String) get changePassword => _passwordController.sink.add;
 
+  submit() {
+    print('login form submitted!');
+  }
+
   dispose() {
     _emailController.close();
     _passwordController.close();
