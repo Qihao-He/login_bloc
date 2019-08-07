@@ -2,7 +2,7 @@ import 'dart:async';
 import 'validators.dart';
 import 'package:rxdart/rxdart.dart';
 
-class Bloc extends Object with Validators{
+class Bloc extends Object with Validators {
   final _emailController = BehaviorSubject<String>();
   final _passwordController = BehaviorSubject<String>();
 

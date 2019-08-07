@@ -9,7 +9,7 @@ class LoginScreen extends StatelessWidget {
     return Container(
       margin: EdgeInsets.all(20.0),
       child: Column(
-        children:<Widget>[
+        children: <Widget>[
           space,
           emailField(bloc),
           passwordField(bloc),
@@ -42,7 +42,7 @@ class LoginScreen extends StatelessWidget {
   Widget passwordField(Bloc bloc) {
     return StreamBuilder(
       stream: bloc.passwordStream,
-      builder: (context, snapshot){
+      builder: (context, snapshot) {
         return TextField(
           onChanged: bloc.changePassword,
           obscureText: true,
@@ -63,12 +63,9 @@ class LoginScreen extends StatelessWidget {
         return RaisedButton(
           child: Text('Login'),
           color: Colors.blue,
-          onPressed: snapshot.hasData
-          ? bloc.submit
-          : null,
+          onPressed: snapshot.hasData ? bloc.submit : null,
         );
       },
     );
   }
 }
-
