@@ -14,7 +14,7 @@ class Bloc extends Object with Validators {
   Stream<bool> get submitValid =>
       Observable.combineLatest2(emailStream, passwordStream, (e, p) => true);
 
-  // Retrieve data from stream
+  // Change data
   Function(String) get changeEmail => _emailController.sink.add;
   Function(String) get changePassword => _passwordController.sink.add;
 
